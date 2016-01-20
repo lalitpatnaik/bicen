@@ -1,3 +1,5 @@
+[This article is posted here: http://chronicengineer.blogspot.ca/2013/12/bicycle-power.html]
+
 A few months back, Deepak Malani asked me about the torque and power requirements of a bicycle so as to get an idea of the required ratings of an electric motor that can be retrofitted in the bicycle. So I went about doing some back of the envelope calculations taking into account rolling friction, aerodynamic drag and inclines. Here's a simple MATLAB/octave script I wrote to carry out the calculations. 
 
 The following assumptions were made:
