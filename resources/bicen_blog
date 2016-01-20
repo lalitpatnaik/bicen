@@ -1,0 +1,27 @@
+A few months back, Deepak Malani asked me about the torque and power requirements of a bicycle so as to get an idea of the required ratings of an electric motor that can be retrofitted in the bicycle. So I went about doing some back of the envelope calculations taking into account rolling friction, aerodynamic drag and inclines. Here's a simple MATLAB/octave script I wrote to carry out the calculations. 
+
+The following assumptions were made:
+The transmission (pedal-sprocket-chain assembly) is 100% efficient. Note that practical efficiencies are in the range of 96-98%
+The rider plus bike system is moving at a constant velocity
+There is no headwind, tailwind or crosswind
+
+Plugging in some typical values for the parameters, a 65 kg rider on a 15 kg bike moving at 15 kmph on a level road (no incline), does mechanical work at a rate of 60 Watts. He/she would need to put in a torque of about 10 Nm into the pedals (assuming a gear ratio of 2).
+
+You can use the script for plugging in various values of the parameters and computing the torque and power requirements under those conditions. Note that at even a couple of degrees of upward incline, the torque required to overcome gravity dominates over that required to overcome rolling friction and aerodynamic drag.
+
+The computations in the script are for a constant speed. However, the rating of the motor needs to take into account the worst case scenario which would typically be an acceleration or even a constant speed climb up a specified incline. 
+
+A few points to note:
+The coefficient of rolling friction (Crr) could vary between 0.0021 to 0.017 as per reference [1]
+The aerodynamic drag coefficient (Cdr) could vary between 0.65 to 1.1 as per reference [1]
+The gear ratio (GR) could be anywhere between 1.75 to 4 as per reference [2]
+The gear ratio (GR) and wheel radius (Rw) effect only the torque requirement but not the power requirement
+For electric bikes with hub motors, GR=1
+
+References:
+[1] http://large.stanford.edu/courses/2010/ph240/stetler1/
+[2] http://www.technologystudent.com/gears1/gearat1.htm
+[3] http://www.slowtwitch.com/Tech/The_Physics_of_Moving_a_Bike_163.html
+[4] http://www.cyclingpowerlab.com/CyclingAerodynamics.aspx
+
+
