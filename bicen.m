@@ -1,5 +1,5 @@
-% Calculation of power and torque requirements while riding a conventional 
-% human-powered bike or an electric bike (driven by battery and motor)
+% Calculates power and torque requirements while riding a conventional 
+% human-powered bike or an electric bike driven by battery and motor.
 
 % Author: Lalit Patnaik, DESE, IISc, Bangalore
 % Date: 22 April 2013
